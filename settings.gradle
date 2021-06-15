@@ -1,3 +1,5 @@
 rootProject.name = 'bio-sources'
 include ':bio-source-ithrivedb'
 project(':bio-source-ithrivedb').projectDir = new File(settingsDir, './ithrivedb')
+include ':bio-source-riodb'
+project(':bio-source-riodb').projectDir = new File(settingsDir, './riodb')
