@@ -24,7 +24,7 @@ import java.sql.Statement;
  * 
  * @author
  */
-public class RiodbConverter extends BioDBConverter
+public class RioDBConverter extends BioDBConverter
 {
     // 
     private static final String DATASET_TITLE = "Add DataSet.title here";
@@ -32,12 +32,12 @@ public class RiodbConverter extends BioDBConverter
 
 
     /**
-     * Construct a new RiodbConverter.
+     * Construct a new RioDBConverter.
      * @param database the database to read from
      * @param model the Model used by the object store we will write to with the ItemWriter
      * @param writer an ItemWriter used to handle Items created
      */
-    public RiodbConverter(Database database, Model model, ItemWriter writer) {
+    public RioDBConverter(Database database, Model model, ItemWriter writer) {
         super(database, model, writer, DATA_SOURCE_NAME, DATASET_TITLE);
     }
 
@@ -65,5 +65,14 @@ public class RiodbConverter extends BioDBConverter
     @Override
     public String getDataSetTitle(String taxonId) {
         return DATASET_TITLE;
+    }
+
+    /**
+     * Return the licence for these data
+     *
+     * @return the licence, a URL for the licence for these data
+     */
+    public String getLicence() {
+        return null;
     }
 }

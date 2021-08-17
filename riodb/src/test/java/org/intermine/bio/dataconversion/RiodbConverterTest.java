@@ -13,7 +13,7 @@ package org.intermine.bio.dataconversion;
 public class RiodbConverterTest extends ItemsTestCase
 {
     Model model = Model.getInstanceByName("genomic");
-    RiodbConverter converter;
+    RioDBConverter converter;
     MockItemWriter itemWriter;
 
     public RiodbConverterTest(String arg) {
