@@ -24,20 +24,20 @@ import java.sql.Statement;
  * 
  * @author
  */
-public class IthrivedbConverter extends BioDBConverter
+public class IthriveDBConverter extends BioDBConverter
 {
     // 
-    private static final String DATASET_TITLE = "Add DataSet.title here";
-    private static final String DATA_SOURCE_NAME = "Add DataSource.name here";
+    private static final String DATASET_TITLE = "iThrive dataset";
+    private static final String DATA_SOURCE_NAME = "NHS";
 
 
     /**
-     * Construct a new IthrivedbConverter.
+     * Construct a new IthriveDBConverter.
      * @param database the database to read from
      * @param model the Model used by the object store we will write to with the ItemWriter
      * @param writer an ItemWriter used to handle Items created
      */
-    public IthrivedbConverter(Database database, Model model, ItemWriter writer) {
+    public IthriveDBConverter(Database database, Model model, ItemWriter writer) {
         super(database, model, writer, DATA_SOURCE_NAME, DATASET_TITLE);
     }
 
@@ -65,5 +65,14 @@ public class IthrivedbConverter extends BioDBConverter
     @Override
     public String getDataSetTitle(String taxonId) {
         return DATASET_TITLE;
+    }
+
+    /**
+     * Return the licence for these data
+     *
+     * @return the licence, a URL for the licence for these data
+     */
+    public String getLicence() {
+        return null;
     }
 }

@@ -13,7 +13,7 @@ package org.intermine.bio.dataconversion;
 public class IthrivedbConverterTest extends ItemsTestCase
 {
     Model model = Model.getInstanceByName("genomic");
-    IthrivedbConverter converter;
+    IthriveDBConverter converter;
     MockItemWriter itemWriter;
 
     public IthrivedbConverterTest(String arg) {
