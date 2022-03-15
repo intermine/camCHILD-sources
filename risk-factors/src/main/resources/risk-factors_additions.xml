@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<!-- add any <class> elements here -->
+    <class name="Patient" is-interface="true">
+        <collection name="riskFactors" referenced-type="RiskFactor"
+                    reverse-reference="patient" />
+    </class>
+
+    <class name="RiskFactorDefinition" is-interface="true">
+        <attribute name="riskFactor" type="java.lang.String" />
+        <attribute name="domain" type="java.lang.String" />
+        <attribute name="level" type="java.lang.String" />
+        <attribute name="type" type="java.lang.String" />
+        <attribute name="additionalInfo" type="java.lang.String" />
+        <attribute name="underservedPopulation" type="java.lang.Boolean" />
+<!--
+       <collection name="patients" referenced-type="Patient"
+                    reverse-reference="riskFactorDefinitions" />
+       -->
+    </class>
+
+    <class name="RiskFactor" is-interface="true">
+        <attribute name="boolean_value" type="java.lang.String" />
+        <attribute name="categorical_value" type="java.lang.String" />
+        <attribute name="numerical_value" type="java.lang.Double" />
+        <reference name="patient" referenced-type="Patient"
+                    reverse-reference="riskFactors" />
+        <reference name="risk" referenced-type="RiskFactorDefinition" />
+    </class>
+
+</classes>
