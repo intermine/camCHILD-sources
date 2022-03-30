@@ -15,10 +15,6 @@
         <attribute name="type" type="java.lang.String" />
         <attribute name="additionalInfo" type="java.lang.String" />
         <attribute name="underservedPopulation" type="java.lang.Boolean" />
-<!--
-       <collection name="patients" referenced-type="Patient"
-                    reverse-reference="riskFactorDefinitions" />
-       -->
     </class>
 
     <class name="RiskFactor" is-interface="true">
