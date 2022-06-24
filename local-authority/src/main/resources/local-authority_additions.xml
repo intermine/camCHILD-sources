@@ -1,7 +1,227 @@
 <?xml version="1.0"?>
-<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
-
 <classes>
-<!-- add any <class> elements here -->
-
+  <class name="ADDRESS_HIST_DIM">
+    <attribute name="ADDRESS_END_DATE" type="java.util.Date"/>
+    <attribute name="ADDRESS_ID" type="java.lang.Integer"/>
+    <attribute name="ADDRESS_START_DATE" type="java.util.Date"/>
+    <attribute name="ADDRESS_TYPE" type="java.lang.String"/>
+    <attribute name="LSOA" type="java.lang.String"/>
+    <attribute name="ORGANISATION" type="java.lang.String"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="ASSESSMENT_FORM_FACT">
+    <attribute name="ANSWER_ID" type="java.lang.Integer"/>
+    <attribute name="COMPLETED_DATE" type="java.util.Date"/>
+    <attribute name="COMPLETE_BY_DEPARTMENT" type="java.lang.String"/>
+    <attribute name="FORM_DESCRIPTION" type="java.lang.String"/>
+    <attribute name="FORM_ID" type="java.lang.Integer"/>
+    <attribute name="FORM_MOST_RECENT_UPDATE" type="java.util.Date"/>
+    <attribute name="FORM_TYPE_ID_CODE" type="java.lang.String"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="QUESTION" type="java.lang.String"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="CATEGORY_OF_NEED_FACT">
+    <attribute name="CATEGORY_OF_NEED" type="java.lang.String"/>
+    <attribute name="NEED_END_DATE" type="java.util.Date"/>
+    <attribute name="NEED_ID" type="java.lang.Integer"/>
+    <attribute name="NEED_START_DATE" type="java.util.Date"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="REFERRAL_ID" type="java.lang.Integer"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="CLA_FACT">
+    <attribute name="CATEGORY_OF_NEED" type="java.lang.String"/>
+    <attribute name="CLA_CEASED_REASON" type="java.lang.String"/>
+    <attribute name="CLA_ID" type="java.lang.Integer"/>
+    <attribute name="CLA_REASON" type="java.lang.String"/>
+    <attribute name="DATE_BECAME_LOOKED_AFTER" type="java.util.Date"/>
+    <attribute name="DATE_CEASED_LOOKED_AFTER" type="java.util.Date"/>
+    <attribute name="LEGAL_STATUS" type="java.lang.String"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="REFERRAL_ID" type="java.lang.Integer"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="CONTACT_FACT">
+    <attribute name="CNT_OUTCOME_ADVICE" type="java.lang.String"/>
+    <attribute name="CNT_OUTCOME_CP_ENQUIRY" type="java.lang.String"/>
+    <attribute name="CNT_OUTCOME_EXISTING_REFERRAL" type="java.lang.String"/>
+    <attribute name="CNT_OUTCOME_MISSING" type="java.lang.String"/>
+    <attribute name="CNT_OUTCOME_NEW_REFERRAL" type="java.lang.String"/>
+    <attribute name="CNT_OUTCOME_NFA" type="java.lang.String"/>
+    <attribute name="CNT_OUTCOME_NON_AGENCY_ADOPTION" type="java.lang.String"/>
+    <attribute name="CNT_OUTCOME_OTHER_LOCAL_AUTH_CP" type="java.lang.String"/>
+    <attribute name="CNT_OUTCOME_PRIVATE_FOSTERING" type="java.lang.String"/>
+    <attribute name="CONTACT_DATE" type="java.util.Date"/>
+    <attribute name="CONTACT_ID" type="java.lang.Integer"/>
+    <attribute name="CONTACT_REASON" type="java.lang.String"/>
+    <attribute name="CONTACT_SOURCE" type="java.lang.String"/>
+    <attribute name="DEPARTMENT" type="java.lang.String"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="REFERRAL_ID" type="java.lang.Integer"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="CP_PLAN_FACT">
+    <attribute name="CP_CATEGORY_DESC" type="java.lang.String"/>
+    <attribute name="CP_CATEGORY_EMOTIONAL" type="java.lang.String"/>
+    <attribute name="CP_CATEGORY_NEGLECT" type="java.lang.String"/>
+    <attribute name="CP_CATEGORY_PHYSICAL" type="java.lang.String"/>
+    <attribute name="CP_CATEGORY_SEXUAL" type="java.lang.String"/>
+    <attribute name="CP_END_DATE" type="java.util.Date"/>
+    <attribute name="CP_PLAN_ID" type="java.lang.Integer"/>
+    <attribute name="CP_START_DATE" type="java.util.Date"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="REFERRAL_ID" type="java.lang.Integer"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="DISABILITY_FACT">
+    <attribute name="DISABILITY_CODE" type="java.lang.String"/>
+    <attribute name="DISABILITY_DESCRIPTION" type="java.lang.String"/>
+    <attribute name="DISABILITY_ID" type="java.lang.Integer"/>
+    <attribute name="DIS_END_DATE" type="java.util.Date"/>
+    <attribute name="DIS_START_DATE" type="java.util.Date"/>
+    <attribute name="HEALTH_CONDITION" type="java.lang.String"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="EARLY_HELP_CONTACT_FACT">
+    <attribute name="CONTACT_DATE" type="java.util.Date"/>
+    <attribute name="CONTACT_SOURCE" type="java.lang.String"/>
+    <attribute name="DEPARTMENT" type="java.lang.String"/>
+    <attribute name="EHCNT_OUTCOME_EHCP" type="java.lang.String"/>
+    <attribute name="EHCNT_OUTCOME_MASH" type="java.lang.String"/>
+    <attribute name="EHCNT_OUTCOME_NFA" type="java.lang.String"/>
+    <attribute name="EHNCT_OUTCOME_EHCP_TRANSFER" type="java.lang.String"/>
+    <attribute name="EH_CONTACT_ID" type="java.lang.Integer"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="LANGUAGE_FACT">
+    <attribute name="LANGUAGE_CODE" type="java.lang.String"/>
+    <attribute name="LANGUAGE_DESC" type="java.lang.String"/>
+    <attribute name="LANGUAGE_ID" type="java.lang.Integer"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="PRIMARY_LANGUAGE" type="java.lang.String"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="PERSON_DIM">
+    <attribute name="DATE_OF_DEATH" type="java.util.Date"/>
+    <attribute name="DOB" type="java.util.Date"/>
+    <attribute name="ETHNICITY_17_LEVEL" type="java.lang.String"/>
+    <attribute name="ETHNICITY_CODE" type="java.lang.String"/>
+    <attribute name="ETHNICITY_DESCRIPTION" type="java.lang.String"/>
+    <attribute name="ETHNICITY_DFE_CODE" type="java.lang.String"/>
+    <attribute name="GENDER" type="java.lang.String"/>
+    <attribute name="IS_DISABLED" type="java.lang.String"/>
+    <attribute name="NATIONALITY_CODE" type="java.lang.String"/>
+    <attribute name="NATIONALITY_DESCRITPION" type="java.lang.String"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="RELIGION_CODE" type="java.lang.String"/>
+    <attribute name="RELIGION_DESCRIPTION" type="java.lang.String"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="REFERRAL_FACT">
+    <attribute name="CONTACT_SOURCE" type="java.lang.String"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="PREVIOUS_REFERRAL_END" type="java.util.Date"/>
+    <attribute name="PREVIOUS_REFERRAL_START" type="java.util.Date"/>
+    <attribute name="REFERRAL_END_DATE" type="java.util.Date"/>
+    <attribute name="REFERRAL_END_REASON" type="java.lang.String"/>
+    <attribute name="REFERRAL_ID" type="java.lang.Integer"/>
+    <attribute name="REFERRAL_START_DATE" type="java.util.Date"/>
+    <attribute name="REFERRAL_TO_TEAM" type="java.lang.String"/>
+    <attribute name="REF_OUTCOME_CARE_LEAVER" type="java.lang.String"/>
+    <attribute name="REF_OUTCOME_CLA" type="java.lang.String"/>
+    <attribute name="REF_OUTCOME_CP_CONFERENCE" type="java.lang.String"/>
+    <attribute name="REF_OUTCOME_CP_TRANSFER_IN" type="java.lang.String"/>
+    <attribute name="REF_OUTCOME_NFA" type="java.lang.String"/>
+    <attribute name="REF_OUTCOME_NON_AGENCY_ADDOPTION" type="java.lang.String"/>
+    <attribute name="REF_OUTCOME_PRIVATE_FOSTERING" type="java.lang.String"/>
+    <attribute name="REF_OUTCOME_SINGLE_ASSESSMENT" type="java.lang.String"/>
+    <attribute name="REF_OUTCOME_STRATEGY_DISCUSSION" type="java.lang.String"/>
+    <attribute name="REREFERRAL_FLAG" type="java.lang.String"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="S47_ENQUIRY_FACT">
+    <attribute name="DIM_LOOKUP_STEP_SUMMARY_STATUS_DESC" type="java.lang.String"/>
+    <attribute name="PARENT_PATHWAY" type="java.lang.String"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="REFERRAL_ID" type="java.lang.Integer"/>
+    <attribute name="S47_ENQ_END_DATE" type="java.util.Date"/>
+    <attribute name="S47_ENQ_OUTCOME_CP_CONFERENCE" type="java.lang.String"/>
+    <attribute name="S47_ENQ_OUTCOME_LEGAL_ACTION" type="java.lang.String"/>
+    <attribute name="S47_ENQ_OUTCOME_MONITOR" type="java.lang.String"/>
+    <attribute name="S47_ENQ_OUTCOME_NFA" type="java.lang.String"/>
+    <attribute name="S47_ENQ_OUTCOME_NFA_CONT_CORE_ASSESSMENT" type="java.lang.String"/>
+    <attribute name="S47_ENQ_OUTCOME_NFA_CONT_SINGLE_ASSESSMENT" type="java.lang.String"/>
+    <attribute name="S47_ENQ_OUTCOME_PROV_OF_SHORT_BREAK_CARE" type="java.lang.String"/>
+    <attribute name="S47_ENQ_OUTCOME_PROV_OF_SVCS" type="java.lang.String"/>
+    <attribute name="S47_ENQ_START_DATE" type="java.util.Date"/>
+    <attribute name="S47_ID" type="java.lang.Integer"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="SINGLE_ASSESSMENT_FACT">
+    <attribute name="ASSESSMENT_END_DATE" type="java.util.Date"/>
+    <attribute name="ASSESSMENT_ID" type="java.lang.Integer"/>
+    <attribute name="ASSESSMENT_START_DATE" type="java.util.Date"/>
+    <attribute name="ASSESS_OUTCOME_CLA_REQUEST" type="java.lang.String"/>
+    <attribute name="ASSESS_OUTCOME_LEGAL_ACTION" type="java.lang.String"/>
+    <attribute name="ASSESS_OUTCOME_NFA" type="java.lang.String"/>
+    <attribute name="ASSESS_OUTCOME_NFA_S47_END" type="java.lang.String"/>
+    <attribute name="ASSESS_OUTCOME_PRIV_FOSTERING" type="java.lang.String"/>
+    <attribute name="ASSESS_OUTCOME_PROVISION_OF_SERVICE" type="java.lang.String"/>
+    <attribute name="ASSESS_OUTCOME_PROV_SB_CARE" type="java.lang.String"/>
+    <attribute name="ASSESS_OUTCOME_REF_OTHER_AGENCY" type="java.lang.String"/>
+    <attribute name="ASSESS_OUTCOME_SPECIALIST_ASSESS" type="java.lang.String"/>
+    <attribute name="ASSESS_OUTCOME_STRATEGY_DISCUSSION" type="java.lang.String"/>
+    <attribute name="COMPLETED_BY_DEPT_NAME" type="java.lang.String"/>
+    <attribute name="FORM_ID" type="java.lang.Integer"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="REFERRAL_ID" type="java.lang.Integer"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
+  <class name="STRATEGY_DISCUSSION_FACT">
+    <attribute name="DISCUSSION_ID" type="java.lang.Integer"/>
+    <attribute name="MEETING_DATE" type="java.util.Date"/>
+    <attribute name="MEETING_ID" type="java.lang.Integer"/>
+    <attribute name="rid" type="java.lang.String"/>
+    <attribute name="trid" type="java.lang.Integer"/>
+    <attribute name="nhshash" type="java.lang.String"/>
+    <attribute name="REFERRAL_ID" type="java.lang.Integer"/>
+    <attribute name="STR_DIS_OUTCOME_FOLLOW_UP_STR_DIS" type="java.lang.String"/>
+    <attribute name="STR_DIS_OUTCOME_NFA" type="java.lang.String"/>
+    <attribute name="STR_DIS_OUTCOME_POLICE_INVESTIGATION" type="java.lang.String"/>
+    <attribute name="STR_DIS_OUTCOME_REF_OTHER_AGENCY" type="java.lang.String"/>
+    <attribute name="STR_DIS_OUTCOME_S47_CONTINUE_EPISODE" type="java.lang.String"/>
+    <attribute name="STR_DIS_OUTCOME_S47_INVESTIGATION" type="java.lang.String"/>
+    <attribute name="STR_DIS_OUTCOME_SINGLE_ASSESSMENT" type="java.lang.String"/>
+    <attribute name="_when_processed_utc" type="java.util.Date"/>
+  </class>
 </classes>
