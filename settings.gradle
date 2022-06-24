@@ -5,3 +5,5 @@ include ':bio-source-riodb'
 project(':bio-source-riodb').projectDir = new File(settingsDir, './riodb')
 include ':bio-source-risk-factors'
 project(':bio-source-risk-factors').projectDir = new File(settingsDir, './risk-factors')
+include ':bio-source-local-authority'
+project(':bio-source-local-authority').projectDir = new File(settingsDir, './local-authority')
