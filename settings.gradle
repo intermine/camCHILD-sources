@@ -9,3 +9,5 @@ include ':bio-source-local-authority'
 project(':bio-source-local-authority').projectDir = new File(settingsDir, './local-authority')
 include ':bio-source-ccs_community_service'
 project(':bio-source-ccs_community_service').projectDir = new File(settingsDir, './ccs_community_service')
+include ':bio-source-rio_mental_health'
+project(':bio-source-rio_mental_health').projectDir = new File(settingsDir, './rio_mental_health')
